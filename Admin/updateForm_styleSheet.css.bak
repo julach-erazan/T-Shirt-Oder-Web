@@ -1,0 +1,80 @@
+/* Reset some default styles */
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background-color:#80b4ff;
+}
+
+body, h2, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+
+td{
+	background-color:#f2f2f2;
+}
+
+/* Input styles */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+	border:none;
+}
+
+/* Button styles */
+.btn {
+    text-align: center;
+}
+
+#btn_update, #btn_cancel {
+    padding: 8px 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    th, td {
+        font-size: 14px;
+    }
+}
+
+/* Add more responsive styles as needed */

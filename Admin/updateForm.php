@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+	<link rel="stylesheet" type="text/css" href="updateForm_styleSheet.css">
+</head>
+<body>
+    <?php
+    $host = 'localhost'; 
+    $dbUsername = 'root'; 
+    $dbPassword = ''; 
+    $dbName = 'order_db'; 
+
+    $connection = mysqli_connect($host, $dbUsername, $dbPassword, $dbName);
+
+    if (!$connection) {
+    die('Database connection failed: ' . mysqli_connect_error());
+    }
+
+
+    $user_id = $_GET['_user_id'];
+    $registationNumber = $_GET['_registationNumber'];
+    $name = $_GET['_name'];
+    $xs = $_GET['_xs'];
+    $s = $_GET['_s'];
+    $m = $_GET['_m'];
+    $l = $_GET['_l'];
+    $xl = $_GET['_xl'];
+    $green_2xl = $_GET['_2xl'];
+    $green_3xl = $_GET['_3xl'];
+
+
+    mysqli_close($connection);
+    ?>
+
+    <div class="container">
+        <h2>Update Details</h2>
+        <form action="update.php" method="POST">
+        <div id="greenTable_div">
+            <table id="greenTable">
+				<tr><th colspan="9" style="background-color:green;">Green</th></tr>
+                <tr>
+                    <th><label>Registation Number</label></th>
+                    <th><label>Full Name</label></th>
+                    <th><label>XS</label></th>
+                    <th><label>S</label></th>
+                    <th><label>M</label></th>
+                    <th><label>L</label></th>
+                    <th><label>XL</label></th>
+                    <th><label>2XL</label></th>
+                    <th><label>3XL</label></th>
+                </tr>
+
+                <tr>
+                    <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+                    <td><input type="text" name="registationNumber" placeholder="Registration Number" value="<?php echo $registationNumber; ?>" required/></td>
+                    <td><input type="text" name="name" value="<?php echo $name; ?>" placeholder="Full Name" required></td>
+                    <td><input type="number" name="xs" value="<?php echo $xs; ?>" placeholder="XS" required min="0"></td>
+                    <td><input type="number" name="s" value="<?php echo $s; ?>" placeholder="S" required min="0"></td>
+                    <td><input type="number" name="m" value="<?php echo $m; ?>" placeholder="M" required min="0"></td>
+                    <td><input type="number" name="l" value="<?php echo $l; ?>" placeholder="L" required min="0"></td>
+                    <td><input type="number" name="xl" value="<?php echo $xl; ?>" placeholder="XL" required min="0"></td>
+                    <td><input type="number" name="2xl" value="<?php echo $green_2xl; ?>" placeholder="2XL" required min="0"></td>
+                    <td><input type="number" name="3xl" value="<?php echo $green_3xl; ?>" placeholder="3XL" required min="0"></td>
+                </tr>
+					<table class="add_table">
+                        <tr class="btn">
+                            <td class="td_update" colspan="3">
+                                <button id="btn_update" type="submit"></button>
+                                <button id="btn_cancel" type="button" onclick="window.location.href='admin_index.php'"></button>
+                            </td>
+                        </tr>
+                    </table>
+					</div>
+                </form>
+            </div>
+    </body>
+</html>

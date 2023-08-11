@@ -1,0 +1,163 @@
+*{
+  margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #86cffa;;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container{
+  width: 80%;
+  min-width: 300px;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+
+h2{
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: rgb(0, 34, 146);
+}
+
+form{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label{
+  width: 50%;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 34, 146);
+  padding: 2px 2px 2px 7px;
+  border-radius: 40px;
+  height: 40px;
+}
+
+input{
+  width: calc(100% - 30px);
+  height: 30px;
+  border: none;
+  padding: 5px 5px 5px 10px;
+  font-size: 17px;
+  border-radius: 0 40px 40px 0;
+}
+
+input:focus {
+  outline: none;
+  background-color: white;
+}
+
+#btn_login{
+  margin-top: 50px;
+  width: 220px;
+  height: 40px;
+  border-radius: 40px;
+  font-size: 20px;
+  background-color: white;
+  color: rgb(0, 34, 146);
+  border: 2px solid rgb(0, 34, 146);
+  text-align: center;
+}
+
+#btn_login:hover{
+  background-color: rgb(0, 34, 146);
+  color: rgb(255, 255, 255);
+}
+
+.topnav {
+	width: 100vw;
+	min-width: 300px;
+	height: 50px;
+	background-color: #86cffa;
+  }
+  
+  .topnav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	background-color: #73b9ee;
+  }
+  
+  .topnav a:hover {
+	background-color: #5494da;
+	color: black;
+  }
+  
+  .topnav a.active {
+	background-color: #3373c4;
+	color: white;
+  }
+  
+  .topnav .icon {
+	display: none;
+  }
+
+.main-div{
+	width: 100vw;
+	min-width: 300px;
+	height:100vh;
+	background-color:#86cffa;
+}
+
+@media only screen and (max-width: 500px){
+  .topnav a:not(:first-child) {display: none;}
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {position: relative;}
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  #btn_login{
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .container{
+    width: 50%;
+  }
+  
+}

@@ -1,0 +1,261 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color:#80b4ff;
+}
+
+body, h2, table {
+    margin: 0;
+    padding: 0;
+}
+
+.count_table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-weight:800;
+  color:#fff;
+}
+
+.count_table td, .count_table th {
+  border: none;
+  padding: 8px;
+}
+
+
+.topnav {
+	width: 100vw;
+	min-width: 300px;
+	height: 50px;
+	background-color: #86cffa;
+  }
+  
+  .topnav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	background-color: #73b9ee;
+  }
+  
+  .topnav a:hover {
+	background-color: #5494da;
+	color: black;
+  }
+  
+  .topnav a.active {
+	background-color: #3373c4;
+	color: white;
+  }
+  
+  .topnav .icon {
+	display: none;
+  }
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add_table {
+    width: 80%;
+    text-align: center;
+}
+
+.btn {
+    padding-top: 20px;
+}
+
+.td_update {
+    padding-top: 20px;
+}
+
+.btn_update{
+    background-color: rgb(255, 255, 255);
+    background-image: url('update.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% auto;;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+  }
+
+  .btn_update:hover{
+    background-color: #03ac13;
+    background-image: url('update2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% auto;
+    border: none;
+  }
+
+  #btn_delete{
+    width: 50px;
+    height: 30px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-image: url('delete.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 45% auto;
+  }
+
+  #btn_delete:hover{
+    background-color: #ff0000;
+    background-image: url('delete2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 45% auto;
+    border: none;
+  }
+
+  .view_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .view_table th,
+  .view_table td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .view_table th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .view_table td {
+    background-color: #f2f2f2;
+  }
+  
+  .view_table .action_area_btn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .view_table .btn_update,
+  .view_table #btn_delete {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .view_table .btn_update {
+    margin-right: 10px;
+  }
+
+
+  #order_form{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #order_form input,label{
+    width: 80%;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  #order_form label{
+    font-weight: 800;
+  }
+
+  #order_form input[type='checkbox']{
+    height: 15px;
+    margin-top: 20px;
+  }
+
+  #order_form div{
+    height: 30px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+	
+	.count_table {
+    border: 0;
+  }
+
+  .count_table tr {
+    border-bottom: 2px solid #ddd;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .count_table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 14px;
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .count_table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .topnav a:not(:first-child) {display: none;}
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {position: relative;}
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+
+}
+
+@media only screen and (min-width: 800px) {
+
+}
